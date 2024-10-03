@@ -16,13 +16,9 @@ export class NewPostComponent {
     this.apiService.sendPost(this.newPost).subscribe({
       next: (response) => {
         console.log('Post added:', response);
-
-        // الحصول على القيمة الحالية للـ BehaviorSubject
         const currentPosts = this.apiService
           .getPostsBehaviorSubjectValue()
           .getValue();
-
-        // تحديث الـ BehaviorSubject بالقيمة الجديدة
         this.apiService
           .getPostsBehaviorSubjectValue()
           .next([...currentPosts, response]);

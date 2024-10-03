@@ -15,8 +15,6 @@ export class SearchPostComponent {
 
   search(): void {
     this.apiService.searchPosts(this.searchTerm);
-
-    // الاشتراك في Subject للحصول على النتائج
     this.apiService.getPostsSubject().subscribe({
       next: (filteredPosts: Post[]) => {
         this.posts = filteredPosts;
