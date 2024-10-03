@@ -1,0 +1,11 @@
+<div>
+  <h2>Search Posts</h2>
+  <input [(ngModel)]="searchTerm" placeholder="Search by title" />
+  <button (click)="search()">Search</button>
+
+  <ul>
+    <li *ngFor="let post of posts">
+      {{ post.title }}
+    </li>
+  </ul>
+</div>

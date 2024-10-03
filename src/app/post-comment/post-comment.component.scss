@@ -1,0 +1,25 @@
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.post-list,
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-list li,
+.comment-list li {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}

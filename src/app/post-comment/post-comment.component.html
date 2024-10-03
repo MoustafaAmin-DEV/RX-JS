@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>posts and comments</h1>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="posts.length > 0">
+    <h2>posts</h2>
+    <ul class="post-list">
+      <li *ngFor="let post of posts">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.body }}</p>
+        <h4>comments</h4>
+        <ul class="comment-list">
+          <ng-container *ngFor="let comment of comments">
+            <li *ngIf="comment.postId === post.id">
+              <strong>{{ comment.name }}:</strong>
+              <p>{{ comment.body }}</p>
+            </li>
+          </ng-container>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="posts.length === 0">
+    <p>not data found</p>
+  </div>
+</div>

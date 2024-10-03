@@ -1,0 +1,6 @@
+<div>
+  <h2>Add New Post</h2>
+  <input [(ngModel)]="newPost.title" placeholder="Title" />
+  <textarea [(ngModel)]="newPost.body" placeholder="Body"></textarea>
+  <button (click)="addPost()">Add Post</button>
+</div>
